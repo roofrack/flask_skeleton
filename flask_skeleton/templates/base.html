@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- This is for the browserlink vim plugin to work -->
+    <!-- <script src='http://0.0.0.0:9001/js/socket.js'></script> --> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- this is how to link to your static files in flask -->
+    <!-- check to make sure the filenames are correct -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <script type=text/javascript src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        {% block content %}{% endblock %}
+
+        <!--
+        Stuff from your child template will go in here. Make sure
+        you call the child template and not the parent in the 
+        render_template method or it wont read the child stuff. This is jinja
+        templating. Hey Rob, make sure you rename or get the html files
+        named correctly so render_template can find them.
+        -->
+
+
+    </div>
+
+</body>
+</html>
