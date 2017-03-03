@@ -3,14 +3,16 @@
 <head>
 
     <!-- This is for the browserlink vim plugin to work -->
-    <!-- <script src='http://0.0.0.0:9001/js/socket.js'></script> --> 
+    <script src='http://0.0.0.0:9001/js/socket.js'></script> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <!-- this is how to link to your static files in flask -->
     <!-- check to make sure the filenames are correct -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-    <script type=text/javascript src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script type=text/javascript src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+    <script type=text/javascript src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
 
 </head>
 
